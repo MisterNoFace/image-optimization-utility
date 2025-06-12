@@ -17,7 +17,7 @@ These modules are updated automatically by the program when it runs.
 ## Usage and Parameters  
 To start scanning for images, run the script with Python and specify the folder path using the `--path` argument:
 
-> **`python.exe utility_immagini.py --path path/to/folder`**
+> **`python.exe image_optimizer.py --path path/to/folder`**
 
 **The `--path` argument is the only required parameter**, since it indicates the folder path to scan.  
 However, the following optional parameters are available:
@@ -38,9 +38,9 @@ However, the following optional parameters are available:
 
 - `-n` or `--name`: sets the suffix for the output folder name. Default is `COPY`.<br>
 
-For example, if you run the command: `python.exe utility_immagini.py --path C:\Users\...\image_folder` the program will create a folder at: `C:\Users\...\image_folder_COPY`, because the `--name` parameter defaults to `COPY`.
+For example, if you run the command: `image_optimizer.py --path C:\Users\...\image_folder` the program will create a folder at: `C:\Users\...\image_folder_COPY`, because the `--name` parameter defaults to `COPY`.
 
-If you specify a custom suffix, the resulting folder will have a different name: `python.exe utility_immagini.py --path C:\Users\...\image_folder --name TEST` creates a folder at: `C:\Users\...\image_folder_TEST`
+If you specify a custom suffix, the resulting folder will have a different name: `image_optimizer.py --path C:\Users\...\image_folder --name TEST` creates a folder at: `C:\Users\...\image_folder_TEST`
 
 > So, **it is recommended to set a folder suffix** each time you run the scan, **to avoid overwriting files from a previous run.**
 
