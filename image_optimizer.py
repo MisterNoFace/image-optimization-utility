@@ -14,7 +14,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 parser = ArgumentParser(prog='web image utility')
 parser.add_argument("-p", "--path", required=True, help="path of the folder to scan")
-parser.add_argument("-n", "--name", required=False, default='COPIA', help="suffix to add to the name of the copy folder. Default is 'COPIA'")
+parser.add_argument("-n", "--name", required=False, default='COPY', help="suffix to add to the name of the copy folder. Default is 'COPIA'")
 parser.add_argument('-m', '--max-size', required=False, default=300, help="maximum image size in kB. Default=300")
 parser.add_argument("-q", "--quality", required=False, default=50, help="image quality (1-100). Default=50")
 parser.add_argument("-dpi", "--dpi", required=False, default=72, help="image dpi. Default=72")
@@ -34,7 +34,6 @@ def get_folder_images(directory: str) -> list:
         for file in files:
             f = Path(dir).joinpath(file)
             if f.is_file() and f.suffix.lower() in ['.jpg', '.jpeg', '.png', '.webp', '.svg']:
-                # print(f)
                 img_folder.append(f)
     return img_folder
 
