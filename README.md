@@ -36,32 +36,19 @@ However, the following optional parameters are available:
 - `-m` or `--max-size`: the minimum size (in kB) an image must have to be compressed. **Default is 300kB.**
 
 
-- `-n` or `--name`: sets the suffix for the output folder name. Default is `COPIA`.<br>
+- `-n` or `--name`: sets the suffix for the output folder name. Default is `COPY`.<br>
 
-For example, if you run the command:  
-`python.exe utility_immagini.py --path C:\Users\...\image_folder`  
-the program will create a folder at:  
-`C:\Users\...\image_folder_COPIA`,  
-because the `--name` parameter defaults to `COPIA`.
+For example, if you run the command: `python.exe utility_immagini.py --path C:\Users\...\image_folder` the program will create a folder at: `C:\Users\...\image_folder_COPY`, because the `--name` parameter defaults to `COPY`.
 
-If you specify a custom suffix, the resulting folder will have a different name:  
-`python.exe utility_immagini.py --path C:\Users\...\image_folder --name TEST`  
-creates a folder at:  
-`C:\Users\...\image_folder_TEST`
+If you specify a custom suffix, the resulting folder will have a different name: `python.exe utility_immagini.py --path C:\Users\...\image_folder --name TEST` creates a folder at: `C:\Users\...\image_folder_TEST`
 
-> So, **it is recommended to set a folder suffix** each time you run the scan,  
-**to avoid overwriting files from a previous run.**
+> So, **it is recommended to set a folder suffix** each time you run the scan, **to avoid overwriting files from a previous run.**
 
 ## How It Works  
-Once you specify the folder path, the program will analyze the filesystem starting from that folder:  
-it will scan folders and subfolders for image files.
+Once you specify the folder path, the program will analyze the filesystem starting from that folder: it will scan folders and subfolders for image files.
 
 > **Only images with the following extensions will be recognized and copied: `.png .jpg .jpeg .svg .webp`**
 
-Once all images are found, the program will replicate the folder structure (including subfolders)  
-and create a new folder with the same name as the original, with the suffix defined by the `--name` parameter,  
-and copy all images into that folder.
+Once all images are found, the program will replicate the folder structure (including subfolders) and create a new folder with the same name as the original, with the suffix defined by the `--name` parameter, and copy all images into that folder.
 
-Finally, the program checks which images exceed 300kB (or the threshold set with `--max-size`):  
-the process involves resizing those images while preserving proportions  
-and partially maintaining quality (which can be adjusted using `--quality`).
+Finally, the program checks which images exceed 300kB (or the threshold set with `--max-size`): the process involves resizing those images while preserving proportions and partially maintaining quality (which can be adjusted using `--quality`).
